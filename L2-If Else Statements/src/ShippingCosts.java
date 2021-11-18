@@ -38,23 +38,22 @@ public class ShippingCosts {
                 shippingRate = 3.70;
             }else {
                 if(itemWeight >= 2){
-                shippingRate = 2.20;
+                    shippingRate = 2.20;
 
-              }else{
-                shippingRate = 1.10;
+                }else{
+                    shippingRate = 1.10;
+                }
             }
         }
-    }
         cost = cost(shippingRate, milesShipped);
         JOptionPane.showMessageDialog(null, "The cost is " + cost);
 
-    public static double cost(double rate, int miles) {
+        public static double cost(double rate, int miles) {
 
-        int costMultiplier = miles / 100;
+            int costMultiplier = miles / 100;
 
-        if (costMultiplier == 0) {
-            costMultiplier = 1;
+            if (costMultiplier == 0) {
+                costMultiplier = 1;
+            }
+
         }
-
-    }
-}
